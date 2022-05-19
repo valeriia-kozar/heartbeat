@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c33;
+    height: 100vh;
+  }
+  
+  #heart {
+    position: relative;
+    width: 100px;
+    height: 90px;  
+    animation: heartbeat 1s ease infinite;
+  }
+  
+  #heart::before,
+  #heart::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    top: 0;
+    left: 50px;
+    width: 50px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  #heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale(0.75);
+    }
+    
+    20% {
+      transform: scale(1);
+    }
+    
+    40% {
+      transform: scale(0.75);
+    }
+    
+    60% {
+      transform: scale(1);
+    }
+    
+    80% {
+      transform: scale(0.75);
+    }
+    
+    100% {
+      transform: scale(0.75);
+    }
+  }
